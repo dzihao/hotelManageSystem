@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="hotelManage" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-9CJRA5CL;Initial Catalog=hotelManage;Persist Security Info=True;User ID=sa" SettingsObjectName="hotelManageSystem.Properties.Settings" SettingsPropertyName="hotelManageConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.product" Member="Product">
+    <Type Name="Product">
+      <Column Name="pro_id" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pro_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_handle" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_units" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="pro_count" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="pro_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="pro_pay" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="pro_realpay" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="pro_difference" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employeeinformation" Member="Employeeinformation">
+    <Type Name="Employeeinformation">
+      <Column Name="emp_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="emp_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_sex" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="emp_position" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_address" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.password" Member="Password">
+    <Type Name="Password">
+      <Column Name="emp_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="emp_originalpassword" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_updatepassword" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customerManage" Member="customerManage">
+    <Type Name="customerManage">
+      <Column Name="cus_name" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cus_phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cus_id" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cus_type" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="cus_roomid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cus_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cus_days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cus_pay" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cus_extra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.salary" Member="Salary">
+    <Type Name="Salary">
+      <Column Name="emp_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="emp_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="basesalary" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="overwork" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="extra" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="allsalary" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reserveManage" Member="reserveManage">
+    <Type Name="reserveManage">
+      <Column Name="cus2_name" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_id" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cus2_type" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_roomid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_pay" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cus2_extra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
